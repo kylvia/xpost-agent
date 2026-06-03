@@ -54,6 +54,8 @@ xpost health
 xpost doctor
 ```
 
+如果你要让 Codex、Claude Code 或其他本地 agent 接手启动、诊断或维护，先看 [docs/agent-usage.md](docs/agent-usage.md)。
+
 ## 配置 `.env`
 
 从 `.env.example` 复制一份本地 `.env`。真实 `.env` 不要提交。
@@ -257,13 +259,13 @@ XPOST_CODEX_MODEL=
 
 发布失败时，不要手动点浏览器按钮来“补完自动化”。应该检查 DOM、截图、日志，修复 `src/x.js` 或 `src/rednote.js`，让下一次 agent 能自动复现。
 
-## 开源前检查
+## 安全与历史说明
 
-当前工作区干净不代表 git 历史干净。公开仓库前建议：
+当前公开仓库是干净初始提交。以后如果要发布 fork、镜像，或从私有开发仓库再次导出公开版本，注意不要把本地运行态和私有历史带出去：
 
 1. 阅读 [SECURITY.md](SECURITY.md)。
 2. 阅读 [docs/open-source-readiness.md](docs/open-source-readiness.md)。
-3. 用 `gitleaks` 或 `trufflehog` 扫描当前树和 git 历史。
+3. 用 `gitleaks` 或 `trufflehog` 扫描准备发布的当前树和 git 历史。
 4. 如果历史里出现过密钥、真实账号、私有 skill、截图或本地状态，先 rewrite/squash 历史。
 5. 轮换任何可能泄露过的 token、webhook 或 API key。
 6. 再运行 `npm run check` 和 `npm test`。

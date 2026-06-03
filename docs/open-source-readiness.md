@@ -1,6 +1,6 @@
-# Open Source Readiness
+# Public Release Safety
 
-Use this checklist before making the repository public or pushing it to a new public remote.
+Use this checklist for forks, mirrors, or future public release exports from a private development repository.
 
 ## Current Tree
 
@@ -12,7 +12,7 @@ Use this checklist before making the repository public or pushing it to a new pu
 
 ## Repository History
 
-The current working tree is not the whole story. Before publishing a repo that has ever contained private prompts, real handles, auth codes, screenshots, or reference corpora:
+The current working tree is not the whole story. Before publishing history that has ever contained private prompts, real handles, auth codes, screenshots, or reference corpora:
 
 1. Scan history with a secret scanner such as `gitleaks` or `trufflehog`.
 2. Rewrite or squash history if private data was committed.

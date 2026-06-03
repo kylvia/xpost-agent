@@ -66,6 +66,8 @@ This runs the installer, verifies the repo, reloads the unified daily planner, r
 
 For a second always-on Mac or a no-skill agent handoff, use [docs/new-runner-handoff.md](docs/new-runner-handoff.md). The repo can carry the code, runbooks, and bootstrap script, but `.env`, Chrome sessions, launchd state, Browser Relay extension state, `~/.xpost-agent`, and Codex automation history are local to each machine.
 
+If you want Codex, Claude Code, or another local agent to operate the project, see [docs/agent-usage.md](docs/agent-usage.md).
+
 The default runner shape is:
 
 ```text
@@ -447,9 +449,9 @@ Agents should run `xpost dry-run` first unless the user explicitly says to publi
 
 For realist-style posts, use `xpost agent-run` for API generation or the bundled `realist-perspective` skill for interactive agent writing, then use `xpost-agent` to dry-run or publish it. The public repo includes only lightweight generic skills; keep private voice models and reference corpora outside git.
 
-## Open Source Notes
+## Security Notes
 
-The package is MIT licensed. Before publishing a fork or moving this repo to a public remote, read [SECURITY.md](SECURITY.md) and [docs/open-source-readiness.md](docs/open-source-readiness.md). The short version: scan current files and git history, keep local runner state out of git, and rotate anything that may have appeared in committed history.
+The package is MIT licensed. For forks, mirrors, or future public release exports, read [SECURITY.md](SECURITY.md) and [docs/open-source-readiness.md](docs/open-source-readiness.md). The short version: keep local runner state out of git, scan any history you plan to publish, and rotate anything that may have appeared in committed history.
 
 ## Content Archive
 
