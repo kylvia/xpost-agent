@@ -1,0 +1,38 @@
+{
+  "name": "xpost-agent",
+  "version": "0.1.0",
+  "description": "Agent-facing local X posting CLI powered by Browser Relay.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kylvia/xpost-agent.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kylvia/xpost-agent/issues"
+  },
+  "homepage": "https://github.com/kylvia/xpost-agent#readme",
+  "keywords": [
+    "agent",
+    "browser-relay",
+    "x",
+    "twitter",
+    "rednote",
+    "xiaohongshu",
+    "launchd",
+    "automation"
+  ],
+  "bin": {
+    "xpost": "./bin/xpost.js"
+  },
+  "scripts": {
+    "bootstrap:agent": "bash scripts/bootstrap-agent-runner.sh",
+    "test": "node --test",
+    "check": "node --check bin/xpost.js && node --check src/*.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@linsoai/browser-relay": "^1.0.10"
+  }
+}
