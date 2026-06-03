@@ -1,8 +1,12 @@
 # xpost-agent 中文说明
 
+[![CI](https://github.com/kylvia/xpost-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/kylvia/xpost-agent/actions/workflows/ci.yml)
+
 `xpost-agent` 是一个面向本地 AI agent 的 Mac 自动化工具，用来完成日常内容计划、X 队列发布、Rednote/小红书队列发布，以及 liao.work 文本和图片生成。
 
 它不使用官方 X API，而是通过 Browser Relay 控制用户已经登录的 Chrome 会话。也就是说，发布能力来自本机浏览器登录状态，而不是平台 API token。
+
+这是一个 Mac 本地 runner，需要 Chrome、Browser Relay 和用户自己的浏览器登录态。
 
 ## 能做什么
 

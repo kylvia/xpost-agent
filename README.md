@@ -1,8 +1,12 @@
 # xpost-agent
 
+[![CI](https://github.com/kylvia/xpost-agent/actions/workflows/ci.yml/badge.svg)](https://github.com/kylvia/xpost-agent/actions/workflows/ci.yml)
+
 Agent-facing local X posting CLI powered by Browser Relay.
 
 [中文说明](README.zh-CN.md)
+
+Mac-only local runner. Requires Chrome, Browser Relay, and the user's logged-in browser sessions. It does not use the official X API.
 
 ## What It Does
 
